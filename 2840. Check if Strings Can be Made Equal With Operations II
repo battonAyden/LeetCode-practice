@@ -7,11 +7,6 @@ class Solution {
                 s1 = s2.replace(b,a);
             }
         }
-        if (s1.equals(s2))
-        {
-            return true;
-        }
-        return false;
-    }
-// you can replace the if statement with return s1.equals(s2) if you want
+         return s1.equals(s2);
+}
 }
