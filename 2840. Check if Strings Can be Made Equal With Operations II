@@ -1,0 +1,18 @@
+class Solution {
+    public boolean checkStrings(String s1, String s2) {
+        char b = s2.charAt(s2.length()-1);
+        for (int i = 0; i < 3; i++) {
+            char a = s1.charAt(i);
+            if ((s2.length() - a) % 2 == 0) {
+                s1 = s1.replace(a,b);
+                 s1 = s2.replace(b,a);
+            }
+        }
+        if (s1.equals(s2))
+        {
+            return true;
+        }
+        return false;
+    }
+// you can replace the if statement with return s1.equals(s2) if you only care about it working in intellej and not the leetcode website
+}
